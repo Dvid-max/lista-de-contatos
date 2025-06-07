@@ -28,4 +28,4 @@ Este é um projeto simples em Java com arquitetura MVC (Model-View-Controller) q
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/SEU_USUARIO/lista-de-contatos.git
+   git clone https://github.com/Dvid-max/lista-de-contatos.git
