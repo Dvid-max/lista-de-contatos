@@ -24,6 +24,7 @@ public class Main {
             System.out.println("Digite '1' para cadastrar contatos");
             System.out.println("Digite '2' para listar contatos");
             System.out.println("Digite '3' para remover contatos");
+            System.out.println("Digite '4' para pesquisar contatos");
 
             resposta = sc.nextInt();
             sc.nextLine();
@@ -36,7 +37,7 @@ public class Main {
                     String telefone = sc.nextLine();
 
                     Contatos contato = new Contatos(nome, telefone );
-                    lista.adicionarContao(contato);
+                    lista.adicionarContato(contato);
                     break;
                 case 2:
                     System.out.println("LISTA DE CONTATOS");
@@ -48,6 +49,19 @@ public class Main {
                     System.out.println("Digite o nome do contato");
                     String nome_removido = sc.nextLine();
                     lista.removerContato(nome_removido);
+                    break;
+                case 4:
+                    System.out.println("PESQUISAR CONTATO");
+                    System.out.println("Digite o nome do contato");
+                    String nome_pesquisado = sc.nextLine();
+
+                    Contatos resultado = lista.buscarContatoPorNome(nome_pesquisado);
+                    if (resultado != null) {
+                        System.out.println(resultado);
+                    }else {
+                        System.out.println("Contato não encotrado");
+                    }
+                break;
             }
 
         }while (resposta != 0);

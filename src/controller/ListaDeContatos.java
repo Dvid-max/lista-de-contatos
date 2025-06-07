@@ -8,7 +8,7 @@ import java.util.List;
 public class ListaDeContatos {
      List<Contatos> lista_de_contatos = new ArrayList<>();
 
-    public  void adicionarContao(Contatos contato){
+    public  void adicionarContato(Contatos contato){
         lista_de_contatos.add(contato);
         System.out.println("model.Contatos adicionados com sucesso!");
     }
@@ -39,10 +39,9 @@ public class ListaDeContatos {
                 lista_de_contatos.remove(i);
                 System.out.println("Contato removido com sucesso!");
                 return;
-            }else {
-                System.out.println("Contato não encontrado>");
             }
         }
+        System.out.println("Contato não encontrado");
     }
 
 
